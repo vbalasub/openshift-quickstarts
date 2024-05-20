@@ -1,0 +1,15 @@
+/home/vbalasub/DEV/openshift-quickstarts/spring-petclinic/src/test/java/org/springframework/samples/petclinic/MysqlTestApplication.java
+/home/vbalasub/DEV/openshift-quickstarts/spring-petclinic/src/test/java/org/springframework/samples/petclinic/owner/VisitControllerTests.java
+/home/vbalasub/DEV/openshift-quickstarts/spring-petclinic/src/test/java/org/springframework/samples/petclinic/PetClinicIntegrationTests.java
+/home/vbalasub/DEV/openshift-quickstarts/spring-petclinic/src/test/java/org/springframework/samples/petclinic/model/ValidatorTests.java
+/home/vbalasub/DEV/openshift-quickstarts/spring-petclinic/src/test/java/org/springframework/samples/petclinic/system/CrashControllerTests.java
+/home/vbalasub/DEV/openshift-quickstarts/spring-petclinic/src/test/java/org/springframework/samples/petclinic/vet/VetControllerTests.java
+/home/vbalasub/DEV/openshift-quickstarts/spring-petclinic/src/test/java/org/springframework/samples/petclinic/vet/VetTests.java
+/home/vbalasub/DEV/openshift-quickstarts/spring-petclinic/src/test/java/org/springframework/samples/petclinic/owner/PetTypeFormatterTests.java
+/home/vbalasub/DEV/openshift-quickstarts/spring-petclinic/src/test/java/org/springframework/samples/petclinic/PostgresIntegrationTests.java
+/home/vbalasub/DEV/openshift-quickstarts/spring-petclinic/src/test/java/org/springframework/samples/petclinic/MySqlIntegrationTests.java
+/home/vbalasub/DEV/openshift-quickstarts/spring-petclinic/src/test/java/org/springframework/samples/petclinic/owner/OwnerControllerTests.java
+/home/vbalasub/DEV/openshift-quickstarts/spring-petclinic/src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java
+/home/vbalasub/DEV/openshift-quickstarts/spring-petclinic/src/test/java/org/springframework/samples/petclinic/system/CrashControllerIntegrationTests.java
+/home/vbalasub/DEV/openshift-quickstarts/spring-petclinic/src/test/java/org/springframework/samples/petclinic/owner/PetControllerTests.java
+/home/vbalasub/DEV/openshift-quickstarts/spring-petclinic/src/test/java/org/springframework/samples/petclinic/service/EntityUtils.java
