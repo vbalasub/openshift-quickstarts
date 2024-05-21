@@ -1,6 +1,6 @@
 package org.quarkus.samples.petclinic.system;
 
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 
 import java.util.Collection;
 import java.util.List;
@@ -14,6 +14,8 @@ import org.quarkus.samples.petclinic.vet.Vet;
 import org.quarkus.samples.petclinic.visit.Visit;
 
 import io.quarkus.qute.TemplateInstance;
+
+
 
 @ApplicationScoped
 public class TemplatesLocale {

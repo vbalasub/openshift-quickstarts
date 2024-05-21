@@ -1,20 +1,15 @@
-# Start with a base image that has Java 17 installed.
-FROM eclipse-temurin:17-jdk-jammy
+FROM registry.access.redhat.com/ubi8/openjdk-17:1.15
 
-# Set a default directory inside the container to work from.
-WORKDIR /app
+ENV LANGUAGE='en_US:en'
 
-# Copy the special Maven files that help us download dependencies.
-COPY .mvn/ .mvn
 
-# Copy only essential Maven files required to download dependencies.
-COPY mvnw pom.xml ./
+# We make four distinct layers so if there are application changes the library layers can be re-used
+COPY --chown=185 target/quarkus-app/lib/ /deployments/lib/
+COPY --chown=185 target/quarkus-app/*.jar /deployments/
+COPY --chown=185 target/quarkus-app/app/ /deployments/app/
+COPY --chown=185 target/quarkus-app/quarkus/ /deployments/quarkus/
 
-# Download all the required project dependencies.
-RUN ./mvnw dependency:resolve
-
-# Copy our actual project files (code, resources, etc.) into the container.
-COPY src ./src
-
-# When the container starts, run the Spring Boot app using Maven.
-CMD ["./mvnw", "compile quarkus:dev"]
+EXPOSE 8080
+USER 185
+ENV JAVA_OPTS="-Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager"
+ENV JAVA_APP_JAR="/deployments/quarkus-run.jar"

@@ -1,0 +1,4 @@
+/home/vbalasub/DEV/openshift-quickstarts/quarkus-petclinic/src/test/java/org/quarkus/samples/petclinic/OwnersResourceIT.java
+/home/vbalasub/DEV/openshift-quickstarts/quarkus-petclinic/src/test/java/org/quarkus/samples/petclinic/OwnersResourceTest.java
+/home/vbalasub/DEV/openshift-quickstarts/quarkus-petclinic/src/test/java/org/quarkus/samples/petclinic/VetsResourceIT.java
+/home/vbalasub/DEV/openshift-quickstarts/quarkus-petclinic/src/test/java/org/quarkus/samples/petclinic/VetsResourceTest.java
