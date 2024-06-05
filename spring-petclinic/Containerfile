@@ -16,6 +16,8 @@ RUN ./mvnw dependency:resolve
 # Copy our actual project files (code, resources, etc.) into the container.
 COPY --chown=185 src ./src
 
+chmod -R 777 /.m2
+
 USER 185
 
 # When the container starts, run the Spring Boot app using Maven.
