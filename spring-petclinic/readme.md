@@ -18,6 +18,7 @@ To exclude Tomcat add the following to your maven pom.xml
 
 ```
 and add the following
+
 ```
 <dependency>
   <groupId>org.springframework.boot</groupId>
@@ -78,17 +79,7 @@ podman run -e POSTGRES_USER=petclinic -e POSTGRES_PASSWORD=petclinic -e POSTGRES
 Further documentation is provided for [MySQL](https://github.com/spring-projects/spring-petclinic/blob/main/src/main/resources/db/mysql/petclinic_db_setup_mysql.txt)
 and for [PostgreSQL](https://github.com/spring-projects/spring-petclinic/blob/main/src/main/resources/db/postgres/petclinic_db_setup_postgres.txt).
 
-Instead of vanilla `docker` you can also use the provided `docker-compose.yml` file to start the database containers. Each one has a profile just like the Spring profile:
 
-```
-$ docker-compose --profile mysql up
-```
-
-or
-
-```
-$ docker-compose --profile postgres up
-```
 
 ## Test Applications
 
@@ -115,7 +106,7 @@ The following items should be installed in your ```system:
 
 1) On the command line run:
     ```
-    git clone https://github.com/spring-projects/spring-petclinic.git
+    git clone https://github.com/vbalasub/openshift-quickstarts.git
     ```
 2) Inside Eclipse or STS:
     ```
