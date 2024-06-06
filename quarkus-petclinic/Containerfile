@@ -2,6 +2,12 @@ FROM registry.access.redhat.com/ubi8/openjdk-17:1.15
 
 ENV LANGUAGE='en_US:en'
 
+# Copy the special Maven files that help us download dependencies.
+COPY --chown=185 .mvn/ .mvn
+
+# Copy only essential Maven files required to download dependencies.
+COPY --chown=185 mvnw pom.xml ./ 
+
 RUN ./mvnw clean package
 
 # We make four distinct layers so if there are application changes the library layers can be re-used
