@@ -1,27 +1,19 @@
 # Start with a base image that has Java 17 installed.
-FROM eclipse-temurin:17-jdk-jammy
-
-# Set a default directory inside the container to work from.
-WORKDIR /app
+FROM registry.access.redhat.com/ubi8/openjdk-17:1.15
 
 # Copy the special Maven files that help us download dependencies.
-COPY --chown=185 .mvn/ .mvn
+COPY  .mvn/ .mvn
 
 # Copy only essential Maven files required to download dependencies.
-COPY --chown=185 mvnw pom.xml ./
-
-# Download all the required project dependencies.
-RUN ./mvnw dependency:resolve
+COPY mvnw pom.xml .
 
 # Copy our actual project files (code, resources, etc.) into the container.
-COPY --chown=185 src ./src
+COPY  src ./src
 
-#RUN chmod -R 777 .m2
+RUN ./mvnw clean package -DskipTests -Dcheckstyle.skip=true
 
 USER 185
+EXPOSE 8080
+COPY --chown=185  target/*.jar .
 
-RUN chgrp -R 0 .m2 && \
-chmod -R g=u .m2
-
-# When the container starts, run the Spring Boot app using Maven.
-CMD ["./mvnw", "spring-boot:run"]
+ENTRYPOINT ["java", "-jar", "./spring-petclinic-3.1.0-SNAPSHOT.jar"]

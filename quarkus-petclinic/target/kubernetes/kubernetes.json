@@ -4,9 +4,9 @@
   "metadata" : {
     "annotations" : {
       "app.quarkus.io/quarkus-version" : "3.8.4",
-      "app.quarkus.io/commit-id" : "db8db45e942cc4a8a9ec94d9e1c3dfdcb7c04d52",
+      "app.quarkus.io/commit-id" : "6cba4f5878933a0389f0808417c1a6b04a4c0620",
       "app.quarkus.io/vcs-uri" : "https://github.com/vbalasub/openshift-quickstarts.git",
-      "app.quarkus.io/build-timestamp" : "2024-06-06 - 00:24:38 +0000"
+      "app.quarkus.io/build-timestamp" : "2024-06-10 - 19:53:16 +0000"
     },
     "labels" : {
       "app.kubernetes.io/name" : "quarkus-petclinic",
@@ -34,9 +34,9 @@
   "metadata" : {
     "annotations" : {
       "app.quarkus.io/quarkus-version" : "3.8.4",
-      "app.quarkus.io/commit-id" : "db8db45e942cc4a8a9ec94d9e1c3dfdcb7c04d52",
+      "app.quarkus.io/commit-id" : "6cba4f5878933a0389f0808417c1a6b04a4c0620",
       "app.quarkus.io/vcs-uri" : "https://github.com/vbalasub/openshift-quickstarts.git",
-      "app.quarkus.io/build-timestamp" : "2024-06-06 - 00:24:38 +0000"
+      "app.quarkus.io/build-timestamp" : "2024-06-10 - 19:53:16 +0000"
     },
     "labels" : {
       "app.kubernetes.io/name" : "quarkus-petclinic",
@@ -57,9 +57,9 @@
       "metadata" : {
         "annotations" : {
           "app.quarkus.io/quarkus-version" : "3.8.4",
-          "app.quarkus.io/commit-id" : "db8db45e942cc4a8a9ec94d9e1c3dfdcb7c04d52",
+          "app.quarkus.io/commit-id" : "6cba4f5878933a0389f0808417c1a6b04a4c0620",
           "app.quarkus.io/vcs-uri" : "https://github.com/vbalasub/openshift-quickstarts.git",
-          "app.quarkus.io/build-timestamp" : "2024-06-06 - 00:24:38 +0000"
+          "app.quarkus.io/build-timestamp" : "2024-06-10 - 19:53:16 +0000"
         },
         "labels" : {
           "app.kubernetes.io/managed-by" : "quarkus",
