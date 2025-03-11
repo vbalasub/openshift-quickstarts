@@ -1,19 +1,28 @@
 # Start with a base image that has Java 17 installed.
-FROM registry.access.redhat.com/ubi8/openjdk-17:1.15
+FROM registry.access.redhat.com/ubi8/openjdk-17:1.21-1 as builder
 
 # Copy the special Maven files that help us download dependencies.
 COPY  .mvn/ .mvn
 
 # Copy only essential Maven files required to download dependencies.
-COPY mvnw pom.xml .
+COPY mvnw pom.xml ./
 
 # Copy our actual project files (code, resources, etc.) into the container.
 COPY  src ./src
 
-RUN ./mvnw clean package -DskipTests -Dcheckstyle.skip=true
+RUN ./mvnw -X clean package -DskipTests -Dcheckstyle.skip=true
 
+COPY  ./target/spring-petclinic-3.1.0-SNAPSHOT.jar .
+
+COPY  spring-petclinic-3.1.0-SNAPSHOT.jar .
+
+RUN ls -altr ./app
+
+
+FROM registry.access.redhat.com/ubi8/openjdk-17:1.21-1
+COPY --from=builder /app/spring-petclinic-3.1.0-SNAPSHOT.jar .
 USER 185
 EXPOSE 8080
-COPY --chown=185  target/*.jar .
+#COPY  ./target/spring-petclinic-3.1.0-SNAPSHOT.jar .
 
 ENTRYPOINT ["java", "-jar", "./spring-petclinic-3.1.0-SNAPSHOT.jar"]
